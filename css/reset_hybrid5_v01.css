@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+	/* START SPECIAL HYBRID 5 DEFAULTS (max cross-browser and old->new render especially when moving to HTML5 coding */
+		html{}
+		body{font-size:100%;height:100%;font-family:Arial,Helvetica,sans-serif;margin:0px;padding:0px;border:0px;vertical-align:baseline;}
+		div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark{ 
+			margin:0px; 
+			padding:0px; 
+			border:0px solid #333; 
+			font-family:inherit; 
+			font-size:inherit; 
+			vertical-align:baseline;
+			line-height:inherit;
+		}
+		audio,video{margin:0px;padding:0px;border:0px;vertical-align:baseline;}
+		article,aside,body,details,div,dt,figcaption,figure,footer,form,header,hgroup,html,isindex,map,menu,nav,section{display:block;} 
+		a img{border:0px solid #333;}
+		a:active,a:hover{outline:none;}
+		ol,ul{margin:12px 0px;} 
+		blockquote,q{quotes:none;} 
+		q:before,q:after{content:"";} /* Remove automatic quotation marks for inline quotations ('q {quotes:none}' not implemented in WebKit) */
+		q,cite{font-style:italic;}
+		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;} 
+		table{border-collapse:collapse;border-spacing:0px;}
+		sup,sub{line-height:0px;} 
+		
+	/* END SPECIAL DEFAULTS */ 

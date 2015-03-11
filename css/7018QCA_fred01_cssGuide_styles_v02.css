@@ -1,0 +1,1063 @@
+@charset "utf-8";
+/* CSS Document */
+
+/************** TAG STYLE ************/
+	/*/////// STANDARD ELEMENTS /////////*/
+	
+	
+	html{
+		height:101%;/* ADD SCROLL BAR */
+	}
+	
+	
+	
+	body{
+		text-align:center;/* CENTER PAGE IN OLD BROWSERS - IE6 & IE7 */
+		margin:0px;
+		background:#ffffff url('../images/bkg_stipes_v01.png') repeat left top;
+		font-family:arial, helvetica, sans-serif;
+		font-size:12px; 
+		color:#666;
+	}
+	
+	div{
+		text-align:left;
+		display:block;
+		position:relative;
+	}
+	
+	h1{
+		font-size:50px;
+		text-transform:uppercase;
+		font-weight:bold;
+		color:#FFF;
+	}
+	
+	h2{
+		font-size:28px;
+		text-transform:uppercase;
+		font-weight:bold;
+		color:#D9E021;
+	}
+	
+	h2 span{
+		font-size:40px;	
+	}
+	
+	h3{
+		font-size:33px;
+		text-transform:uppercase;
+		font-weight:bold;
+		color:#FFF;
+		margin:0 0 20px 0;
+	}
+	
+	h4{
+		font-size:16px;
+		text-transform:uppercase;
+		font-weight:bold;
+		color:#FFF;
+	}
+	
+	h5{
+		font-size:16px;
+		text-transform:uppercase;
+		font-weight:bold;
+		color:#662D91;
+	}
+	
+	h6{
+		font-size:13px;
+		font-weight:bold;
+		color:#662D91;
+	}
+	
+	a{
+		font-style:italic;
+	}
+	
+	span{
+		margin:0 5px;
+		line-height:20px;
+	}
+	
+	
+	ol, ul{
+		margin:0 0 0 20px;
+	}
+	
+	
+	li{
+		
+	}
+	
+	a{
+		color:#C41487;
+		
+	}
+	
+	
+		
+	code{
+			font-family:"Courier New", Courier, monospace;
+			font-size:12px;
+	}
+	
+	
+	
+    /************** ID STYLE *************/
+	/*/// UNIQUE HOOKS, ONLY USE ONCE ///*/
+	
+	#dPageHolder{
+		margin-left:auto;/* CENTER PAGE IN MODERN BROWSERS */
+		margin-right:auto;/* CENTER PAGE IN MODERN BROWSERS */
+		background-color:lime;
+		width:900px;
+		height:auto;
+	}
+	/*---------- PAGE HOLDER NEST ---------*/
+		#dHeader{
+			background-color:#48B4F7;
+			width:100%;
+			height:350px;
+			color:#fff;
+		}
+		
+		#dHeaderLeft{
+			width:185px;
+			height:auto;
+			margin:100px 20px 0 60px;	
+			float:left;
+			text-align:right;
+			
+		}
+		
+		#dHeaderRight{
+			width:570px;
+			height:auto;
+			margin:90px 20px 0 0;	
+		    float:left;
+			border-left:2px solid #FFF;
+		}
+			#dHeaderRight_wrap{
+				width:auto;
+				height:auto;
+				margin:0 0 15px 20px;	
+			}
+	
+		#dSubHeader{
+			display:none;
+		}	
+		
+		#dTorso{
+			width:100%;
+			height:auto;
+			background-color:#CC0;
+		}	
+		/*---------- TORSO NEST ---------*/
+		 
+			/*------- ABSTRACT -----*/
+		
+			#dSubTorso_01{
+				width:100%;
+				height:415px;
+				background-color:#D9E021;
+				overflow:hidden; /* STOP NESTED DIV COLLAPSING MARGIN */
+				
+			}
+			
+				#dSubTorso_01_wrap{
+					width:670px;
+					height:auto;
+					margin:55px 0 0 145px;
+					color:#666;
+					line-height:20px;
+				
+				}
+				
+				
+			
+				
+			/*------ DISPLAY -----*/	
+			
+			#dSubTorso_02{
+				width:100%;
+				height:635px; /* IT HAS NESTED DIVS THAT FLOAT SO IF HEIGHT IS AUTO IT WILL COLLAPSE! */
+				background-color:#F2F2F2;
+				border-bottom:2px solid #CCC;
+			}
+			
+			
+			
+			#dLeft_02{
+				width:300px;
+				height:500px;
+				background-color:red;
+				float:left;
+			}	
+			
+			#dLeft_02 p{
+				color:#FFF;
+				
+				line-height:17px;
+			}	
+			
+			#dLeft_02 p a{
+				color:#FFF;
+			}
+			
+			/*---------- LEFT MENU NEST ---------*/
+			
+			#dLeftHeader_02{
+				width:100%;
+				height:75px;
+				background-color:#93278F;
+				overflow:hidden;
+			}
+				#dLeftHeader_02_wrap{ /* WRAP - TO MOVE THE TEXT AWAY FROM THE EDGE WITHOUT USING PADDING */
+				width:250px;
+				height:auto;
+				margin:20px 0 0 30px;
+				}
+			
+			#dLeftTorso_02{
+				width:100%;
+				height:auto;
+				background-color:#662D91;
+				overflow:hidden;
+			}
+				#dLeftTorso_02_wrap{ /* WRAP - TO MOVE THE TEXT AWAY FROM THE EDGE WITHOUT USING PADDING */
+				width:240px;
+				height:auto;
+				margin:15px 0 0 30px;
+				}
+			
+			#dLeftSubFooter_02{
+				width:100%;
+				height:auto;
+				background-color:#C41487;
+				overflow:hidden;
+			}
+			
+				#dLeftSubFooter_02_wrap{ /* WRAP - TO MOVE THE TEXT AWAY FROM THE EDGE WITHOUT USING PADDING */
+					width:240px;
+					height:auto;
+					margin:15px 0 0 30px;
+				}
+			
+			#dLeftFooter_02{
+				width:100%; 
+				height:15px; 
+				background-color:#FF3D5C;
+				
+			}
+			#dArrowBottom_02{
+				width:0; 
+				height:0; 
+				border-left:150px solid transparent;/* MAKES ARROW WIDER - IT IS HALF THE TOTAL WIDTH */
+				border-right:150px solid transparent;
+	
+				border-top:30px solid #FF3D5C;/* MAKES ARROW MORE POINTY */
+			}
+			
+			
+			/*-----------------------------------*/
+			
+			#dRight_02{
+				width:20px;
+				height:500px;
+				background-color:#93278F;
+				float:right;
+				display:none;
+			}		
+			#dMiddle_02{
+				width:565px;/* GOOD PRINT WIDTH */
+				height:auto;
+				margin:0 0 0 35px;
+				/*margin:0 0 0 10px;*//* LEFT MARGIN GIVES THE IMPRESSION OF PADDING, GAP BETWEEN LEFT & MIDDLE */
+				float:left;	
+			}
+			
+				#dDisplayPreview_container{
+					width:530px;
+					height:270px;
+					border:2px solid #CCC;
+					margin:20px 0 0 0;
+					overflow:hidden;/* STOP CHILD DIV MARGIN COLLAPSING */
+				}
+					#dDisplayPreview{
+						width:510px;
+						height:250px;
+						margin:10px auto;/* AUTO DOESNT WORK ON TOP & BOTTOM MARGINS */
+					}
+					
+					#dDisplayPreview span{
+						color:#FFF;
+						
+					}
+					
+	
+					#dDisplayPreview a{
+						color:#FFF;
+						
+						
+					}
+					
+						#dDisplayBox1{
+							background-color:#C41487;
+							
+							
+						}
+						#dDisplayBox2{
+							background-color:#FF3D5C;
+							
+							/*position:absolute;*/ /* ABSOLUTE MAKES FLOAT NOT WORK? */
+							
+						}
+						#dDisplayBox3{
+							background-color:#D4145A;
+						}
+						#dDisplayBox4{
+							background-color:#93278F;
+						}
+						
+						#dDisplayBox5{
+							background-color:#FF7896;
+						}
+						
+						#dDisplayBox6{
+							background-color:#C39;
+						}
+						
+						#dDisplayBox7{
+							background-color:#C33ECE;
+						}
+						
+						
+						
+					#dDisplayText_container{
+						background-color:#F2F2F2;
+						width:530px;
+						height:auto;
+						
+					}
+					
+					#dDisplayText_container li a{
+					color:#C41487;
+		
+					}
+					
+					
+					
+				#aDisplayMenu{
+					width:auto;
+					height:30px;
+					margin:10px 0 15px 0;
+				}
+				
+				#aDisplayMenu li{
+					width:125px;
+					height:30px;
+					margin:0 11px 0 0;
+					/*display:inline;*/ /* DOESN'T GIVE ANY HEIGHT OR WIDTH IF ONLY USE THIS!*/
+					float:left;
+					list-style:none;
+					text-align:center;
+				}
+					
+				#aDisplayMenu li a:link, li a:visited{
+					display:block;
+					font-weight:bold;
+					text-decoration:none;
+					padding:7px 0;
+					/*line-height:30px;/* OPTION INSTEAD OF PADDING*/
+					color:#FFF;
+					font-size:14px;
+					font-style:normal;
+				}
+				
+				
+
+				#aDisplayMenu li a:hover, li a:active{
+					background-color: #666;
+				}
+			
+						
+			#dRight{
+				float:right;
+				background-color:#CCC;
+				width:280px;/* ADDS UP TO 980px - SO A SMALL GAP LEFT IN BETWEEN */
+				height:400px;
+				display:none;
+			}
+		
+		
+				/*------ POSTION -----*/	
+			
+				#dSubTorso_03{
+					width:100%;
+					height:510px; /* IT HAS NESTED DIVS THAT FLOAT SO IF HEIGHT IS AUTO IT WILL COLLAPSE! */
+					background-color:#F2F2F2;
+				}
+				
+					/* POSITION INFO BOX */
+					
+					#dLeft_03{
+						width:300px;
+						height:500px;
+						float:left;
+					}	
+					
+					#dLeft_03 p{
+						color:#FFF;
+						line-height:17px;
+					}	
+					
+					#dLeft_03 p a{
+						color:#FFF;
+					}
+		
+				/*---------- LEFT MENU NEST 03 - POSITION ---------*/
+			
+			#dLeftHeader_03{
+				width:100%;
+				height:75px;
+				background-color:#FFA700;
+				overflow:hidden;
+			}
+				#dLeftHeader_03_wrap{ /* WRAP - TO MOVE THE TEXT AWAY FROM THE EDGE WITHOUT USING PADDING */
+				width:250px;
+				height:auto;
+				margin:20px 0 0 30px;
+				}
+			
+			#dLeftTorso_03{
+				width:100%;
+				height:auto;
+				background-color:#F14E00;
+				overflow:hidden;
+			}
+				#dLeftTorso_03_wrap{ /* WRAP - TO MOVE THE TEXT AWAY FROM THE EDGE WITHOUT USING PADDING */
+				width:240px;
+				height:auto;
+				margin:15px 0 0 30px;
+				}
+			
+			#dLeftSubFooter_03{
+				width:100%;
+				height:auto;
+				background-color:#F77400;
+				overflow:hidden;
+			}
+			
+				#dLeftSubFooter_03_wrap{ /* WRAP - TO MOVE THE TEXT AWAY FROM THE EDGE WITHOUT USING PADDING */
+					width:240px;
+					height:auto;
+					margin:15px 0 0 30px;
+				}
+			
+			#dLeftFooter_03{
+				width:100%; 
+				height:15px; 
+				background-color:#FFB600;
+				
+			}
+			#dArrowBottom_03{
+				width:0; 
+				height:0; 
+				border-left:150px solid transparent;/* MAKES ARROW WIDER - IT IS HALF THE TOTAL WIDTH */
+				border-right:150px solid transparent;
+	
+				border-top:30px solid #FFB600;/* MAKES ARROW MORE POINTY */
+			}
+			
+			
+			/*-----------------------------------*/
+			/*--------- POSITION CONTENT---------*/
+		
+			#dMiddle_03{
+				width:565px;/* GOOD PRINT WIDTH */
+				height:auto;
+				margin:0 0 0 35px;
+				/*margin:0 0 0 10px;*//* LEFT MARGIN GIVES THE IMPRESSION OF PADDING, GAP BETWEEN LEFT & MIDDLE */
+				
+				float:left;	
+			}
+			
+				#dPositionPreview_container{
+					width:530px;
+					height:270px;
+					border:2px solid #CCC;
+					margin:20px 0 0 0;
+					overflow:hidden;/* STOP CHILD DIV MARGIN COLLAPSING */
+				}
+					#dPositionPreview{
+						width:510px;
+						height:250px;
+						margin:10px auto;/* AUTO DOESNT WORK ON TOP & BOTTOM MARGINS */
+					}
+					
+					#dPositionPreview span{
+						color:#FFF;
+						
+					}
+					
+	
+					#dPositionPreview a{
+						color:#FFF;
+						
+						
+					}
+					
+						#dPositionBox1{
+							background-color:#FFB600;
+							position:static;
+						}
+						#dPositionBox2{
+							background-color:#F14E00;
+							z-index:20;
+							
+						}
+						#dPositionBox3{
+							background-color:#FF9000;
+							position:static;
+						}
+						#dPositionBox4{
+							background-color:#93278F;
+						}
+						
+					
+						
+						
+					#dPositionText_container{
+						background-color:#F2F2F2;
+						width:530px;
+						height:auto;
+						
+					}
+					
+					#dPositionText_container h5{
+						color:#F14C00;
+					}
+					
+					#dPositionText_container li a{
+					color:#C41487;
+		
+					}
+				
+				/*-------------------*/	
+				/*-- POSITION MENU --*/	
+					
+				#aPositionMenu{
+					width:auto;
+					height:30px;
+					margin:10px 0 15px 0;
+				}
+				
+				#aPositionMenu li{
+					width:98px;
+					height:30px;
+					margin:0 11px 0 0;
+					/*display:inline;*/ /* DOESN'T GIVE ANY HEIGHT OR WIDTH IF ONLY USE THIS!*/
+					float:left;
+					list-style:none;
+					text-align:center;
+				}
+					
+				#aPositionMenu li a:link, li a:visited{
+					display:block;
+					font-weight:bold;
+					text-decoration:none;
+					padding:7px 0;
+					/*line-height:30px;/* OPTION INSTEAD OF PADDING*/
+					color:#FFF;
+					font-size:14px;
+					font-style:normal;
+				}
+				
+				
+
+				#PositionMenu li a:hover, li a:active{
+					background-color: #666;
+				}
+			
+			
+			/*------- CRITICAL ANALYSIS -----*/
+		
+			#dSubTorso_04{
+				width:100%;
+				height:650px;
+				background-color:#D9E021;
+				overflow:hidden; /* STOP NESTED DIV COLLAPSING MARGIN */
+				
+			}
+			
+				#dSubTorso_04_wrap{
+					width:670px;
+					height:auto;
+					margin:55px 0 0 125px;
+					color:#666;
+					line-height:20px;
+				
+				}
+				
+			#dSubTorso_04 h3{
+				color:#48B4F7;
+			
+			}	
+			
+			#dSubTorso_04 a{
+				color:#666;
+			
+			}	
+			
+			
+			/*------- REFERENCES -----*/
+		
+			#dSubTorso_05{
+				width:100%;
+				height:350px;
+				background-color:#48B4F7;
+				overflow:hidden; /* STOP NESTED DIV COLLAPSING MARGIN */
+				
+			}
+			
+				#dSubTorso_05_wrap{
+					width:670px;
+					height:auto;
+					margin:55px 0 0 125px;
+					color:#666;
+					line-height:20px;
+				
+				}
+				
+			#dSubTorso_05 h3{
+				color:#D9E021;
+			
+			}	
+			
+			#dSubTorso_05 a{
+				color:#FFF;
+			
+			}	
+			
+			#dSubTorso_05 .bodyText{
+				color:#FFF;
+				text-indent:-15px;
+				margin:0 0 0 15px;
+			
+			}
+			
+			
+			
+			/*------- QUESTIONS AND ANSWERS -----*/
+		
+			#dSubTorso_06{
+				width:100%;
+				height:770px;
+				background-color:#F93E63;
+				overflow:hidden; /* STOP NESTED DIV COLLAPSING MARGIN */
+				
+			}
+			
+				#dSubTorso_06_wrap{
+					width:670px;
+					height:auto;
+					margin:55px 0 0 125px;
+					color:#666;
+					line-height:20px;
+				
+				}
+				
+			#dSubTorso_06 h3{
+				color:#F4B821;
+			
+			}	
+			
+			#dSubTorso_06 a{
+				color:#FFF;
+			
+			}	
+			
+			#dSubTorso_06 li{
+				margin:0 0 10px 0;
+			
+			}
+			
+			#dSubTorso_06 .bodyText{
+				color:#FFF;
+			
+			}
+			
+		
+		
+		/*------- END TORSO NEST -------*/
+		
+		
+		#dFooter{
+			background-color:#FF0;
+			width:100%;
+			height:80px;
+			display:none;
+		}	
+		#dSubFooter{
+			background-color:#FC0;
+			width:100%;
+			height:40px;
+			display:none;
+		}	
+		#dLeftWing{
+			width:25px;
+			height:100%;
+			background:url('../images/bkg_shadowLeft_v01.png') repeat-y right top;
+			position:absolute;
+			top:0px;
+			left:-25px;
+		}	
+		#dRightWing{
+			width:25px;
+			height:100%;
+			background:url('../images/bkg_shadowRight_v01.png') repeat-y left top;
+			position:absolute;
+			top:0px;
+			right:-25px;
+			
+		}	
+		
+	/*------- END PAGE HOLDER NEST ------*/
+			
+	/************ CLASS STYLE *************/
+	/*/ NOT UNIQUE HOOKS, USE MANY TIMES /*/
+	
+	
+	/*------------------------------*/
+	/*-------- GENERAL CLASSES -----*/
+	/*------------------------------*/
+		
+
+		/*----------- BUTTONS ---------*/
+		
+		.btnMenuSelect{
+			background-color:#666;
+		}
+		
+		.btnMenuNormal{
+		background-color:#BFBFBF;
+		}
+		
+		
+		/*---- ABSTRACT FONT STYLES ----*/
+		
+		.bodyText{
+			width:620px;
+			height:auto;
+			margin:0x;
+			color:#666;
+			line-height:20px;
+		}
+		
+		.italic{
+			margin:0;
+			font-size:11px;
+			font-style:italic;
+			font-weight:normal;
+		}
+		
+		.quote{
+			width:100%;
+			height:auto;
+			color:#48B4F7;
+			font-size:21px;
+			font-weight:bold;
+			margin:15px 0 8px 0;	
+			position:relative;
+			top:0;
+			left:-20px;
+		}
+		
+		.qAuthor{
+			position:relative;
+			top:0;
+			left:540px;
+			
+		}
+		
+		.qMarks{
+			width:50px;
+			height:40px;
+			font-family:Georgia, "Times New Roman", Times, serif;
+			font-size:80px;
+			color:#48B4F7;
+			position: absolute;
+			line-height:normal;
+		}
+		
+		.qMarks_left{
+			top:-20px;
+			left:-51px
+		}
+		
+		.qMarks_right{
+			top:-14px;
+			right:-45px
+		}
+		
+		
+		/*----------- BOXES ALL -----------*/
+		
+		.removeBox{
+			display:none;	
+		}
+	
+	/*---------------------------------*/
+	/*---------- DISPLAY BOXES --------*/
+	/*---------------------------------*/
+	
+	
+		/*------- BLOCK BOXES ------*/
+		
+		.blockBox1{
+			
+			height:auto;
+			display:block;
+			line-height:10px;
+		}
+		
+		.blockBox2{
+			width:280px;
+			height:40px;
+			display:block;
+			line-height:40px; /* A LINE-HEIGHT THE SAME VALUE AS THE HEIGHT OF THE BLOCK WILL MAKE IT APPEAR CENTERED */
+		}
+		
+		.blockBox3{
+			width:150px;
+			height:40px;
+			display:block;
+			line-height:40px;
+		}
+		
+		.blockBox4{
+			width:400px;
+			height:95px;
+			display:block;
+			line-height:95px;
+			
+		}
+		.blockBox5{
+			width:280px;
+			height:55px;
+			display:block;
+			line-height:40px;
+			overflow:hidden;
+			
+			
+		}
+		
+		.blockBox5 div{
+			width:255px;
+			height:40px;
+			display:block;
+			background-color:#FF4566;
+			margin:7px 0 0 0;
+			
+			
+		}
+		
+		
+		/*------- INLINE BOXES ------*/
+		
+		.inlineBox1{
+			width:auto;
+			height:auto;
+			display:inline;
+			
+		}
+		
+		.inlineBox5{
+			width:auto;
+			height:auto;
+			display:inline;
+			line-height:20px;
+			
+		}
+		.inlineBox6{
+			width:auto;
+			height:auto;
+			display:inline;
+			border: 7px solid #D1D1D1;
+			
+		}
+		
+		.inlineBox7{
+			width:auto;
+			height:auto;
+			display:inline;
+			border: 8px solid #D1D1D1;
+			
+			
+		}
+		
+		.inlineBox7 span{
+			line-height:100px; /*HAVE TO APPLY LINE HEIGHT TO CLASS SPAN, OTHERWISE FF MOVES BOX 6 ALSO*/
+			
+		}
+		
+		/*------- NONE BOXES ------*/
+		
+		.noneBox1{
+			width:auto;
+			height:40px;
+			
+		}
+		.noneBox2{
+			width:auto;
+			height:120px;
+			line-height:120px
+		}
+		.noneBox3{
+			width:auto;
+			height:40px;
+			
+		}
+		.noneBox4{
+			width:auto;
+			height:40px;
+			line-height:40px
+		}
+		
+		
+		/*------- INLINE-BLOCK BOXES ------*/
+		
+		.inlineBlockBox1{
+			width:auto;
+			height:auto;
+			display:inline-block;
+			line-height:10px;
+		}
+		
+		.inlineBlockBox2{
+			width:auto;
+			height:40px;
+			display:inline-block;
+			line-height:40px; /* A LINE-HEIGHT THE SAME VALUE AS THE HEIGHT OF THE BLOCK WILL MAKE IT APPEAR CENTERED */
+		}
+		
+		.inlineBlockBox3{
+			width:auto;
+			height:40px;
+			display:inline-block;
+			line-height:40px;
+		}
+		
+		.inlineBlockBox4{
+			width:230px;
+			height:140px;
+			display:inline-block;
+			line-height:140px;
+			
+		}
+		.inlineBlockBox5{
+			width:235px;
+			height:55px;
+			display:inline-block;
+			line-height:40px;
+			overflow:hidden;
+			
+			
+		}
+		
+		.inlineBlockBox5 div{
+			width:245px;
+			height:40px;
+			display:block;
+			background-color:#FF4566;
+			margin:7px 0 0 0;
+			
+			
+		}
+		
+		.inlineBlockBox6{
+			width:275px;
+			height:45px;
+			display:inline-block;
+			line-height:45px;
+			
+		}
+		
+	
+	/*---------------------------------*/
+	/*---------- POSITION BOXES -------*/
+	/*---------------------------------*/
+	
+		/*---------- STATIC BOXES --------*/
+		
+		.staticBox1{
+			width:100%;
+			height:60px;
+		}
+		
+		.staticBox2{
+			width:370px;
+			height:120px;
+			margin:5px auto 5px auto;
+			text-align:center;
+			line-height:120px;
+		}
+		
+		.staticBox3{
+			width:100%;
+			height:60px;
+		}
+		
+		/*---------- RELATIVE BOXES --------*/
+		
+		.relativeBox2{
+			position:relative;
+			top:-30px;
+			right:30px;
+			
+		}
+		
+		/*---------- ABSOLUTE BOXES --------*/
+		
+		.absoluteBox2{
+			position:absolute;
+			top:-30px;
+			right:30px;
+						
+		}
+		
+		/*---------- NESTED BOXES --------*/
+		
+		.nestedBox2{
+			position:relative;
+			top:0;
+			right:0;
+			line-height:150px;	
+						
+		}
+		
+		.nestedBox2 div{
+			width:300px;
+			height:50px;
+			background-color:#C12817;	
+			position:absolute;
+			top:10px;
+			right:10px;
+			line-height:50px;
+			text-align:center;	
+			
+					
+		}
+		
+		/*---------- FIXED BOXES --------*/
+		
+		.fixedBox2{
+			position:fixed;
+			top:150px;
+			right:50px;
+						
+		}
+		
+	

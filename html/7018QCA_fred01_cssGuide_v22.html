@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<!-- HTML5 DOCTYPE -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="en" lang="en" >
+<!-- XHTML5 [HYBRID] CODE REQUIRED FOR VALIDATION -->
+
+<head>
+
+    <title>A beginners guide to CSS layout: Display and Positioning | CSS, positioning, display, beginner, HTML5, tutorial, tips</title>
+    <meta charset="utf-8"/>
+    
+    <!--********************************-->
+	<!--*********** STYLES *************-->
+    <!--********************************-->
+    
+    <!------ RESET CSS STYLES: FROM GRIFFITH UNI - MASTER DIGITAL DESIGN - style_hybrid5_20120725a.css ------>
+    <link id="reset_hybrid5" type="text/css" rel="stylesheet" media="all" href="../css/reset_hybrid5_v01.css" />
+    <link id="styles_all" type="text/css" rel="stylesheet" media="all" href="../css/7018QCA_fred01_cssGuide_styles_v02.css" />
+    
+	<style id="style_all" type="text/css" media="all" >
+
+    </style>
+    
+    <!--********************************-->
+    <!--*********** SCRIPT *************-->
+    <!--********************************-->
+    
+    <script id="script_all" type="text/javascript" >
+	
+	
+	/////////////////////////////////////////
+	///////---- DISPLAY PREVIEW -----///////
+	///////////////////////////////////////
+	
+    /////// DISPLAY PREVIEW - BLOCK ///////
+	//////////////////////////////////////
+	
+	
+	
+	function styleBlock(){
+		
+		
+		document.getElementById('dDisplayBox1').className ="blockBox1";
+		document.getElementById('dDisplayBox1').innerHTML ="<span><strong>1.</strong> By default a block will take up the full width available!</span>";
+		
+		document.getElementById('dDisplayBox2').className ="blockBox2";
+		document.getElementById('dDisplayBox2').innerHTML ="<span><strong>2.</strong> Each new block will always go on a new line</span>";
+		
+		document.getElementById('dDisplayBox3').className ="blockBox3";
+		document.getElementById('dDisplayBox3').innerHTML ="<span>&nbsp;&nbsp;...even if they are small</span>";
+		
+		document.getElementById('dDisplayBox4').className ="blockBox4";
+		document.getElementById('dDisplayBox4').innerHTML ="<span><strong>3.</strong> A block can be adjusted to any size using <code>width</code> &amp; <code>height</code>.</span>";
+		
+		document.getElementById('dDisplayBox5').className ="blockBox5";
+		document.getElementById('dDisplayBox5').innerHTML ="<div><span><strong>4.</strong> They can also nest other elements.</span></div>";
+		
+		document.getElementById('dDisplayBox6').className ="removeBox";
+		
+		document.getElementById('dDisplayBox7').className ="removeBox";
+		
+		///// -------- BUTTONS ------- /////
+		
+		document.getElementById('btnBlock').className ="btnMenuSelect";
+		document.getElementById('btnInline').className ="btnMenuNormal";
+		document.getElementById('btnNone').className ="btnMenuNormal";
+		document.getElementById('btnInlineBlock').className ="btnMenuNormal";
+		
+		///// ------- TEXT BOX ------ /////
+	
+		document.getElementById('dDisplayText_container').innerHTML = document.getElementById('dDisplayText_block').innerHTML;
+	}
+	
+    /////// DISPLAY PREVIEW - INLINE ///////
+	//////////////////////////////////////
+	
+	function styleInline(){
+		
+		 
+		document.getElementById('dDisplayBox1').className ="inlineBox1";
+		document.getElementById('dDisplayBox1').innerHTML ="<span><strong>1.</strong> An inline element will be as small as possible!</span>";
+		
+		document.getElementById('dDisplayBox2').className ="inlineBox1";
+		document.getElementById('dDisplayBox2').innerHTML ="<span><strong>2.</strong> They will always be side-by-side . . . . . . . . . if they can fit</span>";
+		
+		document.getElementById('dDisplayBox3').className ="inlineBox1";
+		document.getElementById('dDisplayBox3').innerHTML ="<span>. . .";
+		
+		document.getElementById('dDisplayBox4').className ="inlineBox1";
+		document.getElementById('dDisplayBox4').innerHTML ="<span><strong>3.</strong> Their <code>width</code> &amp; <code>height</code> will always be <code>auto</code>, they cannot be resized like a block element.</span>";
+		
+		document.getElementById('dDisplayBox5').className ="inlineBox5";
+		document.getElementById('dDisplayBox5').innerHTML ="<span><strong>4.</strong> Inline elements can NOT nest block level elements such as a &lt;div&gt;.</span>";
+		
+		document.getElementById('dDisplayBox6').className ="inlineBox6";
+		document.getElementById('dDisplayBox6').innerHTML ="<span><strong>5.</strong> Their margins and borders collapse and overlap each other, one solution is to adjust their <code>line-height</code> to space them out vertically. Centering a group of text vertically is a bit more tricky, a great tutorial on this is: <a href='http://css-tricks.com/vertically-center-multi-lined-text/'>css-tricks.com - vertically center multi-lined text.</a></span>";
+		
+		document.getElementById('dDisplayBox7').className ="inlineBox7";
+		document.getElementById('dDisplayBox7').innerHTML ="<br /><span>eg.<code> span {line-height:100px;}</code>.</span>";
+		
+		///// -------- BUTTONS ------- /////
+		
+		document.getElementById('btnBlock').className ="btnMenuNormal";
+		document.getElementById('btnInline').className ="btnMenuSelect";
+		document.getElementById('btnNone').className ="btnMenuNormal";
+		document.getElementById('btnInlineBlock').className ="btnMenuNormal";
+		
+		///// ------- TEXT BOX ------ /////
+		
+		document.getElementById('dDisplayText_container').innerHTML = document.getElementById('dDisplayText_inline').innerHTML;
+		
+		
+	}
+	
+    /////// DISPLAY PREVIEW - NONE ///////
+	//////////////////////////////////////
+	
+	function styleNone(){
+		document.getElementById('dDisplayBox1').className ="noneBox1";
+		document.getElementById('dDisplayBox1').innerHTML ="";
+		
+		document.getElementById('dDisplayBox2').className ="noneBox2";
+		document.getElementById('dDisplayBox2').innerHTML ="<span><strong>WATCH ME ...I WILL BE COMPLETELY REMOVED!</strong></span>";
+		
+		document.getElementById('dDisplayBox3').className ="removeBox";
+		
+		document.getElementById('dDisplayBox4').className ="noneBox4";
+		document.getElementById('dDisplayBox4').innerHTML ="<span>An element with <code>display:none;</code> will be removed from the document flow.</span>";
+		
+		document.getElementById('dDisplayBox5').className ="removeBox";
+	
+		
+		document.getElementById('dDisplayBox6').className ="removeBox";
+	
+		
+		document.getElementById('dDisplayBox7').className ="removeBox";
+		
+		///// -------- BUTTONS ------- /////
+		
+		document.getElementById('btnBlock').className ="btnMenuNormal";
+		document.getElementById('btnInline').className ="btnMenuNormal";
+		document.getElementById('btnNone').className ="btnMenuSelect";
+		document.getElementById('btnInlineBlock').className ="btnMenuNormal";
+		
+		///// ------- TEXT BOX ------ /////
+		
+		document.getElementById('dDisplayText_container').innerHTML = document.getElementById('dDisplayText_none').innerHTML;
+	}
+	
+	 //----- DISPLAY PREVIEW - NONE: HIDE BOX ------//
+	 
+	function styleNoneRemoveBox()
+	{
+		if (document.getElementById('dDisplayBox2').className =="noneBox2") {
+		document.getElementById('dDisplayBox2').className ="removeBox";
+		}
+	}
+	
+	function styleNoneDelay()
+	{
+		setTimeout("styleNoneRemoveBox()", 3200);
+	}
+	
+
+	    /////// DISPLAY PREVIEW - INLINE-BLOCK ///////
+		/////////////////////////////////////////////
+	
+	function styleInlineBlock(){
+		document.getElementById('dDisplayBox1').className ="inlineBlockBox1";
+		document.getElementById('dDisplayBox1').innerHTML ="<span><strong>1.</strong> An inline-block is a hybrid between <code>block</code> and <code>inline</code>.</span>";
+		
+		document.getElementById('dDisplayBox2').className ="inlineBlockBox2";
+		document.getElementById('dDisplayBox2').innerHTML ="<span><strong>2.</strong> They display side-by-side like <code>inline</code> elements.</span>";
+		
+		document.getElementById('dDisplayBox3').className ="inlineBlockBox3";
+		document.getElementById('dDisplayBox3').innerHTML ="<span>&#40;&lt; A small gap is placed in-between&#41;</span>";
+		
+		document.getElementById('dDisplayBox4').className ="inlineBlockBox4";
+		document.getElementById('dDisplayBox4').innerHTML ="<span><strong>3.</strong> But they can be resized like a block.</span>";
+		
+		document.getElementById('dDisplayBox5').className ="inlineBlockBox5";
+		document.getElementById('dDisplayBox5').innerHTML ="<div><span><strong>4.</strong> They can also nest all other elements.</span></div>";
+		
+		document.getElementById('dDisplayBox6').className ="inlineBlockBox6";
+		document.getElementById('dDisplayBox6').innerHTML ="<div><span><strong>5.</strong> However they are not supported in IE6 &amp; IE7!</span></div>";
+		
+		document.getElementById('dDisplayBox7').className ="removeBox";
+		
+		///// -------- BUTTONS ------- /////
+		
+		document.getElementById('btnBlock').className ="btnMenuNormal";
+		document.getElementById('btnInline').className ="btnMenuNormal";
+		document.getElementById('btnNone').className ="btnMenuNormal";
+		document.getElementById('btnInlineBlock').className ="btnMenuSelect";
+		
+		///// ------- TEXT BOX ------ /////
+		
+		document.getElementById('dDisplayText_container').innerHTML = document.getElementById('dDisplayText_inlineBlock').innerHTML;
+	}
+	
+	///////////////////////////////////////////
+	///////---- POSITON PREVIEW -----/////////
+	/////////////////////////////////////////
+	
+	
+	/////// POSITION PREVIEW - STATIC ///////
+	////////////////////////////////////////
+	
+	function styleStatic(){
+		document.getElementById('dPositionBox1').className ="staticBox1";
+		
+		document.getElementById('dPositionBox2').className ="staticBox2";
+		document.getElementById('dPositionBox2').innerHTML ="<span><code>position:static;</code></span>";
+		
+		document.getElementById('dPositionBox3').className ="staticBox3";
+		
+		document.getElementById('dPositionBox4').className ="removeBox";
+		
+		///// -------- BUTTONS ------- /////
+		
+		document.getElementById('btnStatic').className ="btnMenuSelect";
+		document.getElementById('btnRelative').className ="btnMenuNormal";
+		document.getElementById('btnAbsolute').className ="btnMenuNormal";
+		document.getElementById('btnNested').className ="btnMenuNormal";
+		document.getElementById('btnFixed').className ="btnMenuNormal";
+		
+		///// ------- TEXT BOX ------ /////
+		document.getElementById('dPositionText_container').innerHTML = document.getElementById('dPositionText_static').innerHTML;
+	}
+	
+	///// POSITION PREVIEW - RELATIVE ///////
+	////////////////////////////////////////
+	
+	function styleRelative(){
+		document.getElementById('dPositionBox2').className ="staticBox2 relativeBox2";
+		document.getElementById('dPositionBox2').innerHTML ="<span><code>position:relative&#59; top:-30px&#59; right:30px&#59;</code></span>";
+		
+		///// -------- BUTTONS ------- /////
+		
+		document.getElementById('btnStatic').className ="btnMenuNormal";
+		document.getElementById('btnRelative').className ="btnMenuSelect";
+		document.getElementById('btnAbsolute').className ="btnMenuNormal";
+		document.getElementById('btnNested').className ="btnMenuNormal";
+		document.getElementById('btnFixed').className ="btnMenuNormal";
+		
+		///// ------- TEXT BOX ------ /////
+		document.getElementById('dPositionText_container').innerHTML = document.getElementById('dPositionText_relative').innerHTML;
+	}
+	
+	
+	///// POSITION PREVIEW - ABSOLUTE ///////
+	////////////////////////////////////////
+	
+	function styleAbsolute(){
+		document.getElementById('dPositionBox2').className ="staticBox2 absoluteBox2";
+		document.getElementById('dPositionBox2').innerHTML ="<span><code>position:absolute&#59; top:-30px&#59; right:30px&#59;</code></span>";
+		
+		///// -------- BUTTONS ------- /////
+		
+		document.getElementById('btnStatic').className ="btnMenuNormal";
+		document.getElementById('btnRelative').className ="btnMenuNormal";
+		document.getElementById('btnAbsolute').className ="btnMenuSelect";
+		document.getElementById('btnNested').className ="btnMenuNormal";
+		document.getElementById('btnFixed').className ="btnMenuNormal";
+		
+		///// ------- TEXT BOX ------ /////
+		document.getElementById('dPositionText_container').innerHTML = document.getElementById('dPositionText_absolute').innerHTML;
+	}
+	
+	///// POSITION PREVIEW - NESTED ///////
+	////////////////////////////////////////
+	
+	function styleNested(){
+		document.getElementById('dPositionBox2').className ="staticBox2 nestedBox2";
+		document.getElementById('dPositionBox2').innerHTML ="<span><code>position:relative&#59;</code></span><div><span><code>position:absolute&#59; top:10&#59; right:10&#59;</code></span></div>";
+		
+		///// -------- BUTTONS ------- /////
+		
+		document.getElementById('btnStatic').className ="btnMenuNormal";
+		document.getElementById('btnRelative').className ="btnMenuNormal";
+		document.getElementById('btnAbsolute').className ="btnMenuNormal";
+		document.getElementById('btnNested').className ="btnMenuSelect";
+		document.getElementById('btnFixed').className ="btnMenuNormal";
+		
+		///// ------- TEXT BOX ------ /////
+		document.getElementById('dPositionText_container').innerHTML = document.getElementById('dPositionText_nested').innerHTML;
+	}
+	
+	/////// POSITION PREVIEW - FIXED ////////
+	////////////////////////////////////////
+	
+	function styleFixed(){
+		document.getElementById('dPositionBox2').className ="staticBox2 fixedBox2";
+		document.getElementById('dPositionBox2').innerHTML ="<span>SCROLL!&nbsp;&nbsp;&nbsp;<code>position:fixed&#59; top:150px&#59; right:50px&#59;</code></span>";
+		
+		///// -------- BUTTONS ------- /////
+		
+		document.getElementById('btnStatic').className ="btnMenuNormal";
+		document.getElementById('btnRelative').className ="btnMenuNormal";
+		document.getElementById('btnAbsolute').className ="btnMenuNormal";
+		document.getElementById('btnNested').className ="btnMenuNormal";
+		document.getElementById('btnFixed').className ="btnMenuSelect";
+		
+		///// ------- TEXT BOX ------ /////
+		document.getElementById('dPositionText_container').innerHTML = document.getElementById('dPositionText_fixed').innerHTML;
+	}
+	
+	
+	
+    </script>
+</head>
+
+
+    <!--********************************-->
+    <!--************* BODY *************-->
+    <!--********************************-->
+    
+    
+<body onload='styleBlock(); styleStatic()'>
+<div id="dPageHolder" >
+
+
+	<!--//////////////////////////////-->
+    <!--/////////// HEADERS //////////-->
+    <!--//////////////////////////////-->
+    
+    <div id="dHeader" >
+        <div id="dHeaderLeft">
+        <p>Griffith University<br />
+        <p>By Skye Smith<br />
+        </div><!-- CLOSE LEFT HEADER -->
+        <div id="dHeaderRight">
+            <div id="dHeaderRight_wrap">
+            <h1>A beginners guide to CSS layout </h1>
+            <h2><span>&#91;</span> Part 1: Display &amp; Positioning<span> &#93;</span></h2>
+            </div>
+        </div><!-- CLOSE RIGHT HEADER -->
+    </div><!-- CLOSE HEADER -->
+    <div id="dSubHeader" >SUBHEADER</div><!-- CLOSE SUBHEADER -->
+    
+    <!--///////////////////////////////-->
+    <!--//////////// TORSO ////////////-->
+    <!--//////////////////////////////-->
+
+    
+    <div id="dTorso" >
+    
+    <!--////////// ABSTRACT //////////-->
+    <!--//////////////////////////////-->
+    
+    	<div id="dSubTorso_01" >
+            <div id="dSubTorso_01_wrap">
+            <p class="bodyText">Website styling and layout have come a long way since web designers were restricted to the limited design options provided by HTML alone. Cascading Style Sheets or CSS have revolutionised website design by creating a degree of separation between design and content, resulting in greater control over styling, ease of use, consistency and smaller file sizes.</p>
+            
+    		<p class="quote"><span class="qMarks qMarks_left">&ldquo;</span>CSS is all about changing and improving the appearance of HTML<br /><span class="italic qAuthor">&#40;McFarland, 2009, p. 01&#41;.</span><span class="qMarks qMarks_right">&rdquo;</span></p>
+    
+    		<p class="bodyText">Understanding the basic properties of CSS is fundamental to web design today; in particular the ability to recognise how styles can manipulate HTML page elements to create solid, cross-browser compatible layouts is invaluable.<br /><br />
+This guide has been created to assist beginner web designers’ in comprehending the basic CSS display and positioning properties by providing a visual preview of how their values behave. As a result visual learners are able to gain a greater understanding of the concepts.</p><br />
+
+<p class="bodyText italic">Keywords: CSS, display, positioning, layout, basic, beginner, visual, preview, demonstration, tutorial, guide.</p>
+    		</div><!-- COLSE SUBTORSO 01 WRAP -->
+        </div><!-- COLSE SUBTORSO 01 -->
+        
+       
+    <!--////////// DISPLAY ///////////-->
+    <!--//////////////////////////////-->
+    
+        <div id="dSubTorso_02" >
+        
+            <!----------------------------------->
+            <!-------/ DISPLAY: LEFT MENU  /----->
+            <!----------------------------------->
+            
+            <div id="dLeft_02" >
+            
+            	<div id="dLeftHeader_02">
+                    <div id="dLeftHeader_02_wrap">
+                    <h3>Display</h3>
+                    </div>
+                </div><!-- COLSE LEFT HEADER 02 -->
+                    
+                <div id="dLeftTorso_02">
+                	<div id="dLeftTorso_02_wrap">
+                    <p>The display property determines how a HTML element is displayed by controlling the type of rendering box used by the element. Each HTML element is assigned A default display property, however the default property can be overridden by defining an alternative property (Hunt, 2010). The three main display properties are:<br />
+      <code>display:block;</code><br /><code>display:inline;</code><br /><code>display:none;</code></p>
+       <p>Many other display properties are also available such as inline-block, list-style, table &amp; table-cell.</p>
+       <br />
+                    </div><!-- COLSE LEFT TORSO WRAP 02 -->
+                </div><!-- COLSE LEFT TORSO WRAP 02 -->
+                
+                <div id="dLeftSubFooter_02">
+                    <div id="dLeftSubFooter_02_wrap">
+                    <h4>HELPFUL LINKS</h4>
+    <p><strong>A full list of all the display properties:</strong><br />
+    <a href="http://www.css3.com/display/">www.css3.com/display/</a></p><br />
+    <p><strong>Browser compatibility &amp; further info:</strong><br />
+    <a href="http://www.quirksmode.org/css/display.html">www.quirksmode.org: display</a><br />
+    <a href="http://www.w3schools.com/css/css_display_visibility.asp">www.w3schools.com: display &amp; visibility</a></p>
+    <br />
+    <br />
+                    </div><!-- COLSE LEFT SUB FOOTER 02 -->
+                </div><!-- COLSE LEFT SUB FOOTER 02 WARP -->
+            	
+              <div id="dLeftFooter_02"></div>
+              <div id="dArrowBottom_02"></div>
+            
+            </div><!-- COLSE LEFT 02 -->
+            
+            <div id="dMiddle_02" >
+            
+            
+           		<!------------------------------------>
+            	<!--// DISPLAY: PREVIEW CONTAINER //-->
+                <!------------------------------------>
+            
+                <div id="dDisplayPreview_container">
+                    <div id="dDisplayPreview">
+                        <div id="dDisplayBox1" class="blockBox1">BOX 1</div>
+                        <div id="dDisplayBox2" class="blockBox2">BOX 2</div>
+                        <div id="dDisplayBox3" class="blockBox3">BOX 3</div>
+                        <div id="dDisplayBox4" class="blockBox4">BOX 4</div>
+                        <div id="dDisplayBox5" class="blockBox5">BOX 5</div>
+                        <div id="dDisplayBox6" class="blockBox6">BOX 6</div>
+                        <div id="dDisplayBox7" class="blockBox7">BOX 7</div>
+                    </div><!-- COLSE POSITION PREVIEW -->
+                </div><!-- COLSE POSITION WIDGET CONTAINER -->
+                    
+                    <!----------------------------------->
+                    <!--///////// DISPLAY MENU ////////-->
+                	<!----------------------------------->
+                    <ul id="aDisplayMenu">
+                        <li><a id="btnBlock" onclick="styleBlock();return false" href="#" >BLOCK</a></li>
+                        <li><a id="btnInline" onclick="styleInline();return false" href="#" >INLINE</a></li>
+                        <li><a id="btnNone" onclick="styleNoneDelay();styleNone();return false" href="#" >NONE</a></li>
+                        <li><a id="btnInlineBlock" onclick="styleInlineBlock();return false" href="#" >INLINE-BLOCK</a></li>
+                    </ul>
+                    
+                    <!----------------------------------->
+                    <!--///// ALL TEXT CONTAINER //////-->
+                    <!----------------------------------->
+                    <div id="dDisplayText_container">BOX text</div><!-- COLSE DISPLAY TEXT CONTAINER -->
+                    
+                    
+                    <!----------------------------------->	
+                    <!--//// BLOCK TEXT CONTAINER /////-->
+                    <!----------------------------------->
+                    
+                    <div id="dDisplayText_block" class="removeBox">
+                    <h5>Block</h5>
+                    
+                    <h6>Common tags that have a default display of block:</h6>
+                    <p><code>&lt;div&gt;</code>: A general purpose box<br />
+                    <code>&lt;p&gt;</code>: Paragraph<br />
+                   <code>&lt;h1&gt; - &lt;h6&gt;</code>: Headings<br />
+                   <code>&lt;ul&gt;,  &lt;ol&gt;</code>: Unordered and ordered Lists<br />
+                    <code>&lt;li&gt;</code>: List items<br />
+                   <code>&lt;table&gt;</code>: Tables</p>
+                    <br />
+                 
+                    <h6>Notes:</h6> 
+                    <ul>
+                        <li>Changing the display type of an element only changes how it displays. It will NOT change the kind of element it is &#40;<a href="http://www.w3schools.com/css/css_display_visibility.asp">w3Schools: display</a>&#41;. For example a block element set to <code>display:inline</code> can NOT nest inside an inline element.</li>
+                        <li>The margin of a nested block will collapse into its parent, to fix this you can set <code>overflow:</code> to anything other than <code>visible</code>, such as <code>overflow:auto;</code> or <code>overflow:hidden;</code>. Further information and possible solutions can be found at: <a href='http://reference.sitepoint.com/css/collapsingmargins'>sitepoint: collapsing margins</a></li>
+                        </ul>
+                    </div><!-- COLSE DISPLAY TEXT BLOCK -->
+                
+                <!----------------------------------->
+                <!--//// INLINE TEXT CONTAINER ////-->
+                <!----------------------------------->
+                
+                <div id="dDisplayText_inline" class="removeBox">
+                <h5>Inline</h5>
+                    
+                    <h6>Common tags that have a default display of inline:</h6>
+                    <p><code>&lt;span&gt;</code>: An all-purpose inline element<br />
+                   <code>&lt;a&gt;</code>: Anchor, used to create links<br />
+                    <code>&lt;strong&gt;</code>: Used to make words bold<br />
+                   <code>&lt;img &frasl;&gt;</code>: Image<br />
+                   <code>&lt;br &frasl;&gt;</code>: Line-break is an inline element that forces a new line<br />
+                    <code>&lt;input&gt;</code>: Form input fields</p>
+					<br />
+                    
+                    <h6>Notes:</h6> 
+                    <ul>
+                        <li>In IE6 &amp; IE7 the font will get cut off if the <code>line-height</code> is less than the <code>font-size</code>.</li>
+                        </ul>
+                </div><!-- COLSE DISPLAY TEXT INLINE -->
+                
+                <!----------------------------------->
+                <!--///// NONE TEXT CONTAINER /////-->
+                <!----------------------------------->
+                
+                <div id="dDisplayText_none" class="removeBox">
+                <h5>None</h5>
+                    
+                    <h6>Common tags that have a default display of none:</h6>
+                    <p>Tags that provide accessibility, such as <code>&lt;meta&gt;</code></p>
+					<br />
+                    
+                    <h6>Notes:</h6> 
+                    <ul>
+                        <li>A similar property to <code>display:none;</code> is <code>visibility:hidden;</code> however it will only hide the element from sight, it will not be removed from the document flow, and the original space occupied by the element will be left in place.</li>
+                	</ul>
+                
+                
+                </div><!-- COLSE DISPLAY TEXT NONE -->
+                	
+                <!----------------------------------->
+                <!--/ INLINE-BLOCK TEXT CONTAINER /-->
+                <!----------------------------------->
+                
+                <div id="dDisplayText_inlineBlock" class="removeBox">
+                <h5>Inline-Block</h5>
+                
+                <h6>Common tags that have a default display of inline-block:</h6>
+                <p>No tags have a default display type of <code>inline-block</code>.</p>
+                <br />
+                
+                <h6>Notes:</h6>
+                <p>It may often not be used as it is not supported by IE6 &amp; IE7.</p>
+                </div><!-- COLSE DISPLAY TEXT INLINE-BLOCK -->
+                    
+            
+            </div><!-- COLSE MIDDLE 02 -->
+            <div id="dRight_02" >RIGHT</div><!-- COLSE RIGHT -->
+       
+    </div><!-- COLSE SUBTORSO 02 -->
+        
+        
+    <!--////////// POSITION //////////-->
+    <!--//////////////////////////////-->
+    
+    <div id="dSubTorso_03" >
+        
+            <div id="dLeft_03" >
+            
+            	<!----------------------------------->
+                <!----/ POSITION: LEFT INFO BOX /---->
+                <!----------------------------------->
+            	<div id="dLeftHeader_03">
+                    <div id="dLeftHeader_03_wrap">
+                    <h3>Position</h3>
+                    </div>
+                </div><!-- COLSE LEFT HEADER 02 -->
+                    
+                <div id="dLeftTorso_03">
+                	<div id="dLeftTorso_03_wrap">
+                    <p>The position property allows you to position elements anywhere the screen. The values for the position property are:
+                        <code>position:static;</code> – This is default.<br />
+                        <code>position:relative</code><br />
+                        <code>position:absolute</code></p><br />
+                        <p>The <code>top</code> or <code>bottom</code> &amp; <code>left</code> or <code>right</code> properties can be used in conjunction with the <code>position: relative;</code> and <code>position:absolute;</code> properties to specify the location of the element.</p>
+       <br />
+                    </div><!-- COLSE LEFT TORSO WRAP 02 -->
+                </div><!-- COLSE LEFT TORSO WRAP 02 -->
+                
+                <div id="dLeftSubFooter_03">
+                    <div id="dLeftSubFooter_03_wrap">
+                    <h4>HELPFUL LINKS</h4>
+    <p><strong>Other handy tutorials:</strong><br />
+    <a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/">www.barelyfitz.com: css positioning</a><br />
+    <a href="http://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/">www.css-tricks: how do they differ</a><br /></p>
+    <br />
+    <br />
+                    </div><!-- COLSE LEFT SUB FOOTER 02 -->
+                </div><!-- COLSE LEFT SUB FOOTER 02 WARP -->
+            	
+              <div id="dLeftFooter_03"></div>
+              <div id="dArrowBottom_03"></div>
+            
+            </div><!-- COLSE LEFT 03 -->
+            
+            
+            <!----------------------------------->
+            <!--/ POSITION: PREVIEW CONTAINER /-->
+            <!----------------------------------->
+            
+            <div id="dMiddle_03" >
+            
+                <div id="dPositionPreview_container">
+                    <div id="dPositionPreview">
+                        <div id="dPositionBox1" class="staticBox1"></div>
+                        <div id="dPositionBox2" class="staticBox2"></div>
+                        <div id="dPositionBox3" class="staticBox3"></div>
+                        <div id="dPositionBox4" class="staticBox4"></div>
+                    </div><!-- COLSE POSITION PREVIEW -->
+                </div><!-- COLSE POSITION WIDGET CONTAINER -->
+                    
+                    <!----------------------------------->
+                    <!--///////// POSITION MENU ////////-->
+                	<!----------------------------------->
+                    <ul id="aPositionMenu">
+                        <li><a id="btnStatic" onclick="styleStatic();return false" href="#" >STATIC</a></li>
+                        <li><a id="btnRelative" onclick="styleRelative();return false" href="#" >RELATIVE</a></li>
+                        <li><a id="btnAbsolute" onclick="styleAbsolute();return false" href="#" >ABSOLUTE</a></li>
+                        <li><a id="btnNested" onclick="styleNested();return false" href="#" >NESTING</a></li>
+                        <li><a id="btnFixed" onclick="styleFixed();return false" href="#" >FIXED</a></li>
+                    </ul>
+                    
+                    <!----------------------------------->
+                    <!--///// ALL TEXT CONTAINER //////-->
+                    <!----------------------------------->
+                    <div id="dPositionText_container">BOX text</div><!-- COLSE DISPLAY TEXT CONTAINER -->
+                    
+                    <!----------------------------------->
+                    <!--/// STATIC TEXT CONTAINER /////-->
+                    <!----------------------------------->
+                    
+                    <div id="dPositionText_static" class="removeBox">
+                    <h5>Static</h5>
+                    
+                    <ul>
+                        <li>Static is the default positioning for all elements.</li>
+                        <li>It follows the standard flow of the document.</li>
+                        <li>It can NOT be moved from it’s natural position with the <code>top</code> or <code>bottom</code>, and <code>left</code> or <code>right</code> properties.</li>
+					</ul>
+                    
+                    
+                    
+                    </div><!-- COLSE DISPLAY TEXT STATIC -->
+                    
+                    <!----------------------------------->
+                    <!--/// RELATIVE TEXT CONTAINER ///-->
+                    <!----------------------------------->
+                    
+                    <div id="dPositionText_relative" class="removeBox">
+                    <h5>Relative</h5>
+                    
+                    <ul>
+                        <li>Similar to static in that it follows the standard flow of the document.</li>
+                        <li>However it also allows you to move or rather project the element from its initial standard position, leaving the initial flow of the document unchanged with a space left where the element was originally positioned.</li>
+                        <li>The properties <code>top</code> or <code>bottom</code>, and <code>left</code> or <code>right</code> will move the element in relation to its original position.</li>
+                    </ul>
+                    
+                    
+                    </div><!-- COLSE DISPLAY TEXT RELATIVE -->
+                    
+                    <!----------------------------------->
+                    <!--/// ABSOLUTE TEXT CONTAINER ///-->
+                    <!----------------------------------->
+                    
+                    <div id="dPositionText_absolute" class="removeBox">
+                    <h5>Absolute</h5>
+                    
+                    <ul>
+                        <li>Unlike static and relative, absolute pulls the element out of the standard flow of the document giving you complete control so you can place it exactly where you want it to go.</li>
+<li>Because the element has been pulled out of the standard flow (unlike relative which stays in the flow) the elements around it will be re-repositioned to fill in the space it once occupied.</li>
+<li>The values: top or bottom, and left or right will move the element in relation to its containing block.</li>
+
+                    </ul>
+                    
+                    
+                    </div><!-- COLSE DISPLAY TEXT ABSOLUTE -->
+                    
+                    <!----------------------------------->
+                    <!---/// NESTED TEXT CONTAINER ///--->
+                    <!----------------------------------->
+                    
+                    <div id="dPositionText_nested" class="removeBox">
+                    <h5>Nesting elements - relative &amp; absolute</h5>
+                    
+                    <ul>
+                        <li>If an element is defined as relative all the elements nested within it will be positioned in relation to it. For example an absolute element that is nested within an element assigned the property <code>position:relative;</code> it will move in relation to the edges of that containing element.</li>
+						<li>However if an absolute element is not nested within an element assigned the property <code>position:relative;</code> it will move in relation to the edges of the page (browser window).</li>
+                    </ul>
+                    
+                    
+                    </div><!-- COLSE DISPLAY TEXT NESTED -->
+                    
+                    <!----------------------------------->
+                    <!---/// FIXED TEXT CONTAINER ///--->
+                    <!----------------------------------->
+                    
+                    <div id="dPositionText_fixed" class="removeBox">
+                    <h5>Fixed</h5>
+                    
+                    <ul>
+                        <li>Similar to absolute a fixed element will move out of the standard flow, however a fixed element will remain fixed in the window and not scroll with the rest of the document.This can be handy if you want something to always be in view no matter how much content there is.</li>
+						
+                        <li>However unlike absolute positioned elements, fixed elements cannot be contained by relative parent elements.</li>
+                        <li>Note: <code>position:fixed;</code> is not supported by IE6.</li>
+
+                    </ul>
+                    
+                    
+                    </div><!-- COLSE DISPLAY TEXT FIXED -->
+                    
+            
+            </div><!-- COLSE MIDDLE 02 -->
+            
+        </div><!-- COLSE SUBTORSO 03 -->
+        
+        
+    <!--////////// CRITICAL ANALYSIS //////////-->
+    <!--///////////////////////////////////////-->
+    
+    	<div id="dSubTorso_04" >
+            <div id="dSubTorso_04_wrap">
+            <h3>CSS Critical Analysis</h3>
+            <div class="bodyText">
+            <p>Although CSS provides a vast improvement on HTML styling, there is room for improvement. CSS was ahead of its time when it was first introduced, freeing designers from the standard table layout; however as the web has evolved CSS has fallen behind.</p><br />
+			<p>&ldquo;Conceived in an age when the design of most web sites still looked quite plain, CSS creators couldn’t anticipate the richness and intricacy of the designs that it would eventually be asked to describe (Yank, 2008).&rdquo;</p><br />
+			<p>Although experienced web designers have developed techniques to manipulate CSS into achieving outcomes never envisioned by its creators, novice designers can encounter difficulties mastering these methods, and workarounds can be problematical and time-consuming.</p><br />
+			<p>Vertical alignment is a classic example where CSS has struggled to catch up, and a seemingly simple request is not so simple. Kistner (2004) explains this in more detail (<a href="http://phrogz.net/css/vertical-align/index.html">http://phrogz.net/css/vertical-align/index.html</a>), highlighting the fact that the vertical-align property only works as expected in tables, with no simple property or value provided for normal block elements, such as the margin: auto value which makes horizontal alignment effortless.</p><br />
+			<p>Collapsing vertical margins also provides a great level of confusion to beginners, particularly in the context of nested elements. Olsson et al. (2008) describes the occurrence, as when the vertical margins of two elements are touching, only the element with the largest margin will be used. A margin should behave as expected in any circumstance to separate all elements with no further style specifications needed, this is not the case with CSS.</p><br />
+			<p>Other properties, such as, nested floats also come with some interesting behaviours. The main one being that floated items are not recognised by their parent container causing it to collapse, which in turn leads to other messy issues. CSS layouts would be greatly simplified if elements consistently conformed to their display behaviour guidelines.</p>
+			</div>
+
+    		</div><!-- COLSE SUBTORSO 04 WRAP -->
+        </div><!-- COLSE SUBTORSO 04 -->
+        
+        
+        
+     <!--///////////// REFERENCES //////////////-->
+    <!--///////////////////////////////////////-->
+    
+    	<div id="dSubTorso_05" >
+            <div id="dSubTorso_05_wrap">
+            <h3>References</h3>
+            <div class="bodyText">
+            <p>Hunt, B. (2010). CSS Block vs Inline CSS Display Styles.<br /> 
+            Retrieved from http://www.webdesignfromscratch.com/html-css/css-block-and-inline/</p><br /> 
+			<p>McFarland, D. S. (2009). CSS: The missing manual. Sebastopol, Calif: Pogue Press/O'Reilly.</p><br /> 
+			<p>Olsson, T., O’Brien, P. (2008). Collapsing Margins. Retrieved from<br /> 
+			http://reference.sitepoint.com/css/collapsingmargins</p><br /> 
+			<p>Yank, K. (2008). The Problem with CSS is … Retrieved from<br />
+ 			http://www.sitepoint.com/the-problem-with-css-is/</p><br /> 
+
+            
+			</div>
+
+    		</div><!-- COLSE SUBTORSO 04 WRAP -->
+        </div><!-- COLSE SUBTORSO 04 -->
+        
+        
+    </div><!-- COLSE TORSO -->
+    
+    
+    <!--///////// QUESTIONS & ANSWERS //////////-->
+    <!--///////////////////////////////////////-->
+    
+    	<div id="dSubTorso_06" >
+            <div id="dSubTorso_06_wrap">
+            <h3>Questions &amp; Answers</h3>
+            <div class="bodyText">
+            <ol>
+            <li><strong>Why is it important to understand the fundamental rules of CSS when trying to layout a page?</strong><br />
+CSS has many different properties that can react differently in certain situations. Understanding the fundamental rules will assist in identifying which methods will provide a more structurally sound and valid website, which in turn will create consistency when the site is viewed in multiple browsers.</li>
+
+			<li><strong>What display value is most commonly used when building the structure of a website, and why?</strong><br />
+				The display block value is used, as block elements, such as div’s can be resized and also nest other elements within them.
+           		 </li>
+			<li><strong>When would visibility:hidden; be more appropriate than display:none;?</strong><br />
+				When you want the original space occupied by the element kept in tact, but the element to be hidden from view.
+           		 </li>
+			<li><strong>Why is it undesirable to use a large amount of absolute positioning on your web page?</strong><br />
+				Because absolute positioning takes elements out of the natural flow of the document, they don’t react to all of the elements on the page, which can cause problems to arise if they are used in excess and the browser window is resized.
+            	 </li>
+			<li><strong>If you don’t define the top or bottom, and left or right properties where will an absolute element position itself?</strong><br />
+				If there are no static or relative elements surrounding it, it will jump up to the top, left corner of the browser window.
+                </li>
+
+                </ol>
+
+
+    		</div><!-- COLSE SUBTORSO 04 WRAP -->
+        </div><!-- COLSE SUBTORSO 04 -->
+        
+        
+    </div><!-- COLSE TORSO -->
+    
+    
+	<!--///////////////////////////////-->
+    <!--/////////// FOOTERs ///////////-->
+    <!--///////////////////////////////-->
+    
+    <div id="dFooter" ><a href="#">FOOTER</a></div><!-- COLSE FOOTER -->
+    <div id="dSubFooter" >SUBFOOTER</div><!-- COLSE SUBFOOTER -->
+    
+    
+    <!--///////////////////////////////-->
+    <!--/////////// WINGS ////////////-->
+    <!--///////////////////////////////-->
+    
+    <div id="dLeftWing" ></div><!-- LEFT WING -->
+    <div id="dRightWing" ></div><!-- RIGHT WING -->
+    
+</div><!-- COLSE PAGEHOLDER -->
+
+</body>
+</html>
